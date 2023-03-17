@@ -19,7 +19,7 @@ const postController = {
             userId,
             name,
             prompt,
-            photo: photoUrl.url,
+            photo: photoUrl.secure_url,
           });
           res.status(200).json({ success: true, data: newPost });
         } catch (err) {
