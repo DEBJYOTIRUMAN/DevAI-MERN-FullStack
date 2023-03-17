@@ -96,7 +96,7 @@ const Registration = () => {
         isValid,
       }) => (
         <div>
-          <section className="bg-white dark:bg-gray-900">
+          <section className="bg-gray-900">
             <div className="flex justify-center min-h-screen">
               <div
                 className="hidden bg-cover lg:block lg:w-2/5"
