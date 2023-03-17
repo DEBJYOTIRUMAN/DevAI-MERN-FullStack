@@ -26,7 +26,7 @@ const Registration = () => {
   };
 
   const handleRegistration = (values) => {
-    fetch("http://localhost:8080/api/register", {
+    fetch("https://devai-ius1.onrender.com/api/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

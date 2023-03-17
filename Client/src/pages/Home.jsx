@@ -28,7 +28,7 @@ const Home = () => {
     setLoading(true);
     try {
       const response = await fetch(
-        `http://localhost:8080/api/post/${user._id}`,
+        `https://devai-ius1.onrender.com/api/post/${user._id}`,
         {
           method: "GET",
           headers: {

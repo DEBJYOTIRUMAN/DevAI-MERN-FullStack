@@ -22,7 +22,7 @@ const Login = () => {
   };
 
   const handleLogin = (values) => {
-    fetch("http://localhost:8080/api/login", {
+    fetch("https://devai-ius1.onrender.com/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

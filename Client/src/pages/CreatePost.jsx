@@ -34,7 +34,7 @@ const CreatePost = () => {
     if (form.prompt) {
       try {
         setGeneratingImg(true);
-        const response = await fetch("http://localhost:8080/api/devai", {
+        const response = await fetch("https://devai-ius1.onrender.com/api/devai", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -61,7 +61,7 @@ const CreatePost = () => {
     if (form.prompt && form.photo) {
       setLoading(true);
       try {
-        const response = await fetch("http://localhost:8080/api/post", {
+        const response = await fetch("https://devai-ius1.onrender.com/api/post", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
