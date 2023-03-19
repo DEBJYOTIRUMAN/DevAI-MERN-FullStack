@@ -6,7 +6,7 @@ export default function App() {
     <SafeAreaView style={{ flex: 1 }}>
       <WebView
         mixedContentMode="compatibility"
-        source={{ uri: "http://devai.cu.ma" }}
+        source={{ uri: "https://devai-ruman.vercel.app" }}
       />
     </SafeAreaView>
   );
