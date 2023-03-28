@@ -3,7 +3,7 @@ import Card from "../components/Card";
 import FormField from "../components/FormField";
 import Header from "../components/Header";
 import Loader from "../components/Loader";
-import { ResumifyeContext } from "../ResumifyeContext";
+import { DevAIContext } from "../DevAIContext";
 import bgImage from "../assets/bgImage.jpg";
 
 const RenderCards = ({ data, title }) => {
@@ -17,7 +17,7 @@ const RenderCards = ({ data, title }) => {
 };
 
 const Home = () => {
-  const { user } = useContext(ResumifyeContext);
+  const { user } = useContext(DevAIContext);
   const [loading, setLoading] = useState(false);
   const [allPosts, setAllPosts] = useState(null);
   const [searchText, setSearchText] = useState("");

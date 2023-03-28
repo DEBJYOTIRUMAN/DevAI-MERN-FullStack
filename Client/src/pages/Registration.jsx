@@ -3,12 +3,12 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import { ResumifyeContext } from "../ResumifyeContext";
+import { DevAIContext } from "../DevAIContext";
 import { useNavigate } from "react-router-dom";
 import register from "../assets/register.jpg";
 
 const Registration = () => {
-  const { user, setUser } = useContext(ResumifyeContext);
+  const { user, setUser } = useContext(DevAIContext);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -96,7 +96,7 @@ const Registration = () => {
         isValid,
       }) => (
         <div>
-          <section className="bg-white dark:bg-gray-900">
+          <section className="bg-gray-900">
             <div className="flex justify-center min-h-screen">
               <div
                 className="hidden bg-cover lg:block lg:w-2/5"
@@ -107,11 +107,11 @@ const Registration = () => {
 
               <div className="flex items-center w-full max-w-3xl p-8 mx-auto lg:px-12 lg:w-3/5">
                 <div className="w-full">
-                  <h1 className="text-2xl font-semibold tracking-wider text-gray-800 capitalize dark:text-white">
+                  <h1 className="text-2xl font-semibold tracking-wider capitalize text-white">
                     Get your free account now.
                   </h1>
 
-                  <p className="mt-4 text-gray-500 dark:text-gray-400">
+                  <p className="mt-4 text-gray-400">
                     Let’s get you all set up so you can verify your personal
                     account and begin setting up your profile.
                   </p>
@@ -120,7 +120,7 @@ const Registration = () => {
                     <div>
                       <label
                         htmlFor="firstName"
-                        className="block mb-2 text-sm text-gray-600 dark:text-gray-200"
+                        className="block mb-2 text-sm text-gray-200"
                       >
                         First Name
                       </label>
@@ -128,7 +128,7 @@ const Registration = () => {
                         type="text"
                         id="firstName"
                         placeholder="Ruman"
-                        className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                        className="block w-full px-5 py-3 mt-2 border rounded-md placeholder-gray-600 bg-gray-900 text-gray-300 border-gray-700 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                         onChange={handleChange("firstName")}
                         onBlur={handleBlur("firstName")}
                         value={values.firstName}
@@ -143,7 +143,7 @@ const Registration = () => {
                     <div>
                       <label
                         htmlFor="lastName"
-                        className="block mb-2 text-sm text-gray-600 dark:text-gray-200"
+                        className="block mb-2 text-sm text-gray-200"
                       >
                         Last Name
                       </label>
@@ -151,7 +151,7 @@ const Registration = () => {
                         type="text"
                         id="lastName"
                         placeholder="Das"
-                        className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                        className="block w-full px-5 py-3 mt-2 border rounded-md placeholder-gray-600 bg-gray-900 text-gray-300 border-gray-700 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                         onChange={handleChange("lastName")}
                         onBlur={handleBlur("lastName")}
                         value={values.lastName}
@@ -166,7 +166,7 @@ const Registration = () => {
                     <div>
                       <label
                         htmlFor="phone"
-                        className="block mb-2 text-sm text-gray-600 dark:text-gray-200"
+                        className="block mb-2 text-sm text-gray-200"
                       >
                         Phone Number
                       </label>
@@ -174,7 +174,7 @@ const Registration = () => {
                         type="text"
                         id="phone"
                         placeholder="8250449610"
-                        className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                        className="block w-full px-5 py-3 mt-2 border rounded-md placeholder-gray-600 bg-gray-900 text-gray-300 border-gray-700 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                         onChange={handleChange("phone")}
                         onBlur={handleBlur("phone")}
                         value={values.phone}
@@ -189,7 +189,7 @@ const Registration = () => {
                     <div>
                       <label
                         htmlFor="email"
-                        className="block mb-2 text-sm text-gray-600 dark:text-gray-200"
+                        className="block mb-2 text-sm text-gray-200"
                       >
                         Email Address
                       </label>
@@ -197,7 +197,7 @@ const Registration = () => {
                         type="email"
                         id="email"
                         placeholder="rumandas25@gmail.com"
-                        className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                        className="block w-full px-5 py-3 mt-2 border rounded-md placeholder-gray-600 bg-gray-900 text-gray-300 border-gray-700 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                         onChange={handleChange("email")}
                         onBlur={handleBlur("email")}
                         value={values.email}
@@ -212,7 +212,7 @@ const Registration = () => {
                     <div>
                       <label
                         htmlFor="password"
-                        className="block mb-2 text-sm text-gray-600 dark:text-gray-200"
+                        className="block mb-2 text-sm text-gray-200"
                       >
                         Password
                       </label>
@@ -220,7 +220,7 @@ const Registration = () => {
                         type="password"
                         id="password"
                         placeholder="Enter your password"
-                        className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                        className="block w-full px-5 py-3 mt-2 border rounded-md placeholder-gray-600 bg-gray-900 text-gray-300 border-gray-700 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                         onChange={handleChange("password")}
                         onBlur={handleBlur("password")}
                         value={values.password}
@@ -235,7 +235,7 @@ const Registration = () => {
                     <div>
                       <label
                         htmlFor="confirmPassword"
-                        className="block mb-2 text-sm text-gray-600 dark:text-gray-200"
+                        className="block mb-2 text-sm text-gray-200"
                       >
                         Confirm Password
                       </label>
@@ -243,7 +243,7 @@ const Registration = () => {
                         type="password"
                         id="confirmPassword"
                         placeholder="Enter your password"
-                        className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                        className="block w-full px-5 py-3 mt-2 border rounded-md placeholder-gray-600 bg-gray-900 text-gray-300 border-gray-700 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                         onChange={handleChange("confirmPassword")}
                         onBlur={handleBlur("confirmPassword")}
                         value={values.confirmPassword}
@@ -273,7 +273,7 @@ const Registration = () => {
                         type="button"
                         className={`flex items-center justify-between w-1/2 px-6 py-3 text-sm tracking-wide text-white transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50 ${
                           !isValid &&
-                          "text-gray-900 dark:text-gray-300 bg-gray-800 dark:bg-gray-800 cursor-not-allowed hover:bg-gray-800 hover:dark:bg-gray-800"
+                          "text-gray-300 bg-gray-800 cursor-not-allowed hover:bg-gray-800"
                         }`}
                         onClick={handleSubmit}
                         disabled={!isValid}

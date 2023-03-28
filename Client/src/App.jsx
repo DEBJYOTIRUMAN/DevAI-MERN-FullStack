@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { getUser, storeUser } from "./storage";
-import { ResumifyeContext } from "./ResumifyeContext";
+import { DevAIContext } from "./DevAIContext";
 import Home from "./pages/Home";
 import CreatePost from "./pages/CreatePost";
 import Registration from "./pages/Registration";
@@ -26,14 +26,14 @@ const App = () => {
   }, [user]);
   return (
     <Router>
-      <ResumifyeContext.Provider value={{ user, setUser }}>
+      <DevAIContext.Provider value={{ user, setUser }}>
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/registration" element={<Registration />} />
           <Route path="/home" element={<Home />} />
           <Route path="/create-post" element={<CreatePost />} />
         </Routes>
-      </ResumifyeContext.Provider>
+      </DevAIContext.Provider>
     </Router>
   );
 };

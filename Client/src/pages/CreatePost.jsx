@@ -5,11 +5,11 @@ import { getRandomPrompt } from "../utils";
 import FormField from "../components/FormField";
 import Loader from "../components/Loader";
 import Header from "../components/Header";
-import { ResumifyeContext } from "../ResumifyeContext";
+import { DevAIContext } from "../DevAIContext";
 import bgImage from "../assets/bgImage.jpg";
 
 const CreatePost = () => {
-  const { user } = useContext(ResumifyeContext);
+  const { user } = useContext(DevAIContext);
   const navigate = useNavigate();
 
   const [form, setForm] = useState({
