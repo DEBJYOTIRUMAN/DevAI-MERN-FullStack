@@ -1,5 +1,6 @@
 import { WebView } from "react-native-webview";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { StatusBar } from "expo-status-bar";
 
 export default function App() {
   return (
@@ -8,6 +9,7 @@ export default function App() {
         mixedContentMode="compatibility"
         source={{ uri: "https://devai-ruman.vercel.app" }}
       />
+      <StatusBar style="auto" />
     </SafeAreaView>
   );
 }
